@@ -128,7 +128,7 @@ Backend API pieejams uz `http://localhost:8000/api`
 
 ---
 
-## 📱 Pieejamās lapas
+## Pieejamās lapas
 
 ### Frontend marvirā
 
@@ -140,13 +140,13 @@ Backend API pieejams uz `http://localhost:8000/api`
 ---
 
 
-## 📝 Licencija
+## Licencija
 
 Šis projekts ir privāts un paredzēts mācībām.
 
 ---
 
-## 👨‍💻 Autors
+## Autors
 
 **23DP4ESire** - Nobeiguma darbs
 
