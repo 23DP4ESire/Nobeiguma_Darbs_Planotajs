@@ -150,5 +150,4 @@ Backend API pieejams uz `http://localhost:8000/api`
 
 **23DP4ESire** - Nobeiguma darbs
 
----
 
