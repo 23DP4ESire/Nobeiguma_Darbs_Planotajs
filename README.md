@@ -4,8 +4,6 @@
 
 **Planotajs** ir vienkāršs un pieejams mājas projektu plānošanas risinājums privātpersonām un uzņēmumiem. Mēs piedāvājam profesionālus mājas projektus ar pieņemamām cenām. Planotajs palīdz klientiem redzēt savu sapņu māju projektus pirms to uzbūvēšanas.
 
-Projekts ir veidots kā **Laravel CRUD API backendam** un **React + Vite frontendam**, kas nodrošina moderns un ātrs lietotāja pieredzi.
-
 ---
 
 ## Sistēmas prasības
