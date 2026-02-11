@@ -1,0 +1,152 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* ABOUT HERO SECTION */
+.about-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 3rem;
+  text-align: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-hero-content p {
+  font-size: 1.5rem;
+  opacity: 0.95;
+}
+
+/* MISSION SECTION */
+.mission-section {
+  padding: 6rem 3rem;
+  background: #f9fafb;
+}
+
+.section-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.section-content p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #555;
+  text-align: justify;
+}
+
+/* VALUES SECTION */
+.values-section {
+  padding: 6rem 3rem;
+  background: white;
+  text-align: center;
+}
+
+.values-section h3 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.value-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.value-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* TEAM SECTION */
+.team-section {
+  padding: 6rem 3rem;
+  background: #f9fafb;
+}
+
+/* CTA SECTION */
+.about-cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-cta h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.about-cta p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+.back-button {
+  display: inline-block;
+  background: white;
+  color: #667eea;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.back-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: #f0f0f0;
+}

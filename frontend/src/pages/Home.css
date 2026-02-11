@@ -1,0 +1,139 @@
+/* HERO SECTION */
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 3rem;
+  text-align: center;
+  min-height: 600px;
+}
+
+.hero-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  animation: slideInDown 0.8s ease;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  animation: slideInUp 0.8s ease 0.2s both;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.95;
+  line-height: 1.8;
+  animation: slideInUp 0.8s ease 0.4s both;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: slideInUp 0.8s ease 0.6s both;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: #f0f0f0;
+}
+
+/* GALLERY SECTION */
+.gallery {
+  padding: 6rem 3rem;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.gallery h3 {
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-spot {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+}
+
+.image-spot:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-spot img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-spot h4 {
+  padding: 2rem 1.5rem 0.75rem;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.image-spot p {
+  padding: 0 1.5rem 2rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ANIMATIONS */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
