@@ -60,8 +60,8 @@ npm install
 ### Backend servera palaišana
 
 ```bash
-cd backend
-php artisan serve
+cd run
+php ./run-backend.sh
 ```
 
 **Backend būs pieejams:** `http://localhost:8000`
@@ -71,8 +71,8 @@ php artisan serve
 Atvērt jaunu termināla logu/tab:
 
 ```bash
-cd frontend
-npm run dev
+cd run
+npm ./run-backend.sh
 ```
 
 **Frontend būs pieejams:** `http://localhost:5173`
@@ -83,14 +83,12 @@ Ja vēlaties palaist abu serveru daļas vienlaicīgi:
 
 **Terminal 1:**
 ```bash
-cd backend
-php artisan serve
+cd run
+./run-both.sh
 ```
-
-**Terminal 2:**
+**Lai beigtu serverus**
 ```bash
-cd frontend
-npm run dev
+pkill -f 'php -S' && pkill -f 'vite'
 ```
 
 ---

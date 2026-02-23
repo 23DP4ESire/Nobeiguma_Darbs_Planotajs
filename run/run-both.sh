@@ -19,7 +19,7 @@ echo -e "${YELLOW}Starting Backend...${NC}"
 bash "$SCRIPT_DIR/run-backend.sh" > /tmp/backend.log 2>&1 &
 BACKEND_PID=$!
 echo -e "${GREEN}✓ Backend started (PID: $BACKEND_PID)${NC}"
-echo "  📋 Log: tail -f /tmp/backend.log"
+echo "  Log: tail -f /tmp/backend.log"
 
 # Small delay to let backend start
 sleep 2
@@ -29,7 +29,7 @@ echo -e "${YELLOW}Starting Frontend...${NC}"
 bash "$SCRIPT_DIR/run-frontend.sh" > /tmp/frontend.log 2>&1 &
 FRONTEND_PID=$!
 echo -e "${GREEN}✓ Frontend started (PID: $FRONTEND_PID)${NC}"
-echo "  📋 Log: tail -f /tmp/frontend.log"
+echo "  Log: tail -f /tmp/frontend.log"
 
 echo ""
 echo -e "${BLUE}════════════════════════════════════════${NC}"
