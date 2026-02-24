@@ -78,6 +78,56 @@ body {
   text-decoration: underline;
 }
 
+/* AUTH SECTION */
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.login-button {
+  background: white;
+  color: #667eea;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.login-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.user-welcome {
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.logout-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.logout-button:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-2px);
+}
+
 /* FOOTER */
 .footer {
   background: #333;
