@@ -1,0 +1,251 @@
+.services-page {
+  flex: 1;
+  min-height: calc(100vh - 180px);
+  padding: 3rem;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(49, 175, 214, 0.14), transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(79, 77, 206, 0.14), transparent 40%),
+    #f7f9fc;
+}
+
+.services-admin {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+}
+
+.services-top {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+}
+
+.services-top h1 {
+  font-size: 2.3rem;
+  color: #1f2a44;
+  margin-bottom: 0.5rem;
+}
+
+.services-top p {
+  color: #4c5b76;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.services-search {
+  width: 100%;
+  border: 1px solid #c4d2f0;
+  border-radius: 4px;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.services-controls {
+  display: grid;
+  grid-template-columns: minmax(260px, 560px) minmax(160px, 240px) minmax(160px, 240px);
+  gap: 0.8rem;
+}
+
+.services-tag-filter {
+  border: 1px solid #c4d2f0;
+  border-radius: 4px;
+  padding: 0.9rem 0.8rem;
+  font-size: 0.95rem;
+  background: white;
+  color: #1f2a44;
+}
+
+.services-price-filter {
+  min-width: 0;
+}
+
+.services-tag-filter:focus {
+  outline: none;
+  border-color: #4f4dce;
+  outline: 2px solid rgba(79, 77, 206, 0.18);
+  outline-offset: 1px;
+}
+
+.services-tag-filter:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.services-search:focus {
+  outline: none;
+  border-color: #4f4dce;
+  outline: 2px solid rgba(79, 77, 206, 0.18);
+  outline-offset: 1px;
+}
+
+.services-search:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.services-error {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  background: #fff1f1;
+  color: #a23333;
+  border: 1px solid #f0c8c8;
+  padding: 0.9rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.services-loading {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  color: #4c5b76;
+  font-size: 1rem;
+}
+
+.services-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+
+.service-card {
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e3e9f4;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-clickable {
+  cursor: pointer;
+}
+
+.home-image-placeholder {
+  width: 100%;
+  min-height: 170px;
+  border-radius: 4px;
+  border: 1px dashed #b4c2df;
+  background: linear-gradient(135deg, #eef3ff 0%, #f8fbff 100%);
+  color: #58709d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.service-card-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-card-clickable:focus-visible {
+  outline: 2px solid #4f4dce;
+  outline-offset: 2px;
+}
+
+.service-card h2 {
+  font-size: 1.1rem;
+  color: #1f2a44;
+  margin-bottom: 0.7rem;
+  flex-grow: 1;
+}
+
+.service-card p {
+  color: #4c5b76;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.service-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+}
+
+.service-card-tag {
+  background: #eef3ff;
+  color: #304f8f;
+  border: 1px solid #c4d2f0;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.services-empty {
+  color: #4c5b76;
+  font-size: 1rem;
+  grid-column: 1 / -1;
+  text-align: center;
+  background: white;
+  border: 1px solid #e3e9f4;
+  border-radius: 4px;
+  padding: 1.4rem;
+}
+
+@media (max-width: 700px) {
+  .services-page {
+    padding: 1.25rem;
+  }
+
+  .services-admin {
+    max-width: 100%;
+    margin: 0 0 2rem 0;
+  }
+
+  .services-top h1 {
+    font-size: 1.9rem;
+  }
+
+  .services-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pirkt button: square single-color design */
+.service-card-buy {
+  margin-top: 0.9rem;
+  align-self: flex-start;
+  border: none;
+  border-radius: 8px;
+  background: #4d6fce;
+  color: #fff;
+  width: 60px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.service-card-buy:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+.service-card-buy:focus-visible {
+  outline: 2px solid rgba(77, 111, 206, 0.18);
+  outline-offset: 2px;
+}

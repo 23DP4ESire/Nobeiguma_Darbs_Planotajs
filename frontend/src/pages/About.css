@@ -6,7 +6,7 @@
 
 /* ABOUT HERO SECTION */
 .about-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #31afd6 0%, #4f4dce 100%);
   color: white;
   padding: 6rem 3rem;
   text-align: center;
@@ -75,17 +75,15 @@
 }
 
 .value-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #667eea 0%;
   color: white;
   padding: 2.5rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
 }
 
 .value-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .value-card h4 {
@@ -108,7 +106,7 @@
 
 /* CTA SECTION */
 .about-cta {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg,  #31afd6 0%, #4f4dce 100%);
   color: white;
   padding: 6rem 3rem;
   text-align: center;
@@ -138,15 +136,13 @@
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 50px;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
 
 .back-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   background: #f0f0f0;
 }

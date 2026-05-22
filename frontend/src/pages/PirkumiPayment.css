@@ -1,0 +1,114 @@
+.pirkumi-payment-page {
+  flex: 1;
+  min-height: calc(100vh - 180px);
+  padding: 3rem;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(49, 175, 214, 0.12), transparent 40%),
+    radial-gradient(circle at 88% 8%, rgba(79, 77, 206, 0.12), transparent 36%),
+    #f7f9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pirkumi-payment-card {
+  width: 100%;
+  max-width: 720px;
+  background: white;
+  border: 1px solid #e3e9f4;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(31, 42, 68, 0.08);
+}
+
+.pirkumi-payment-back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #4f4dce;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pirkumi-payment-back:hover {
+  text-decoration: underline;
+}
+
+.pirkumi-payment-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(49, 175, 214, 0.12);
+  color: #1f2a44;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.pirkumi-payment-card h1 {
+  font-size: 2rem;
+  color: #1f2a44;
+  margin-bottom: 0.5rem;
+}
+
+.pirkumi-payment-price {
+  color: #4f4dce;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.9rem;
+}
+
+.pirkumi-payment-text {
+  color: #4c5b76;
+  line-height: 1.7;
+}
+
+.pirkumi-payment-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.pirkumi-payment-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.pirkumi-payment-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.98);
+}
+
+.pirkumi-payment-button-primary {
+  background: #4f4dce;
+  color: white;
+}
+
+.pirkumi-payment-button-secondary {
+  background: #eef2f9;
+  color: #1f2a44;
+  border: 1px solid #cdd7e9;
+}
+
+.pirkumi-payment-error {
+  color: #a23333;
+  background: #fff1f1;
+  border: 1px solid #f0c8c8;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+@media (max-width: 800px) {
+  .pirkumi-payment-page {
+    padding: 1.25rem;
+  }
+
+  .pirkumi-payment-actions {
+    flex-direction: column;
+  }
+}

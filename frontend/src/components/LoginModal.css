@@ -25,11 +25,10 @@
 /* MODAL CONTENT */
 .modal-content {
   background: white;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 2.5rem;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.3s ease-out;
   position: relative;
 }
@@ -103,16 +102,17 @@
 .form-group input {
   padding: 0.8rem;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 0.95rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease;
   font-family: inherit;
 }
 
 .form-group input:focus {
   outline: none;
   border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: 2px solid rgba(102, 126, 234, 0.18);
+  outline-offset: 1px;
 }
 
 .form-group input::placeholder {
@@ -139,7 +139,7 @@
   background-color: #fee;
   color: #c33;
   padding: 0.8rem;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 0.9rem;
   border-left: 4px solid #c33;
 }
@@ -148,7 +148,7 @@
   background-color: #efe;
   color: #3c3;
   padding: 0.8rem;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 0.9rem;
   border-left: 4px solid #3c3;
 }
@@ -159,17 +159,16 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
   margin-top: 0.5rem;
 }
 
 .submit-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
 .submit-button:disabled {

@@ -1,0 +1,279 @@
+.service-manager {
+  background: white;
+  border: 1px solid #e3e9f4;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-manager-header h3 {
+  font-size: 1.2rem;
+  color: #1f2a44;
+  margin: 0;
+}
+
+.service-manager-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-manager-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.service-manager-btn-primary {
+  background: #4d6fce;
+  color: white;
+}
+
+.service-manager-btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.service-manager-btn-secondary {
+  background: #f0f2f7;
+  color: #1f2a44;
+  border: 1px solid #cdd7e9;
+}
+
+.service-manager-btn-secondary:hover:not(:disabled) {
+  background: #e3e9f4;
+}
+
+.service-manager-btn-danger {
+  background: #fee;
+  color: #c33;
+  border: 1px solid #f0c8c8;
+}
+
+.service-manager-btn-danger:hover:not(:disabled) {
+  background: #fdd;
+}
+
+.service-manager-message {
+  padding: 0.9rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.service-manager-error {
+  background: #fff1f1;
+  color: #a23333;
+  border: 1px solid #f0c8c8;
+}
+
+.service-manager-success {
+  background: #eefaf2;
+  color: #1f6b45;
+  border: 1px solid #c8ead3;
+}
+
+.service-manager-form {
+  background: #f9fbff;
+  border: 1px solid #e3e9f4;
+  border-radius: 6px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.service-manager-form-group {
+  margin-bottom: 1rem;
+}
+
+.service-manager-form-group:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.service-manager-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1f2a44;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.service-manager-input,
+.service-manager-textarea {
+  width: 100%;
+  border: 1px solid #cdd7e9;
+  border-radius: 4px;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  color: #1f2a44;
+  font-family: inherit;
+}
+
+.service-manager-input:focus,
+.service-manager-textarea:focus {
+  outline: none;
+  border-color: #4f4dce;
+  outline: 2px solid rgba(79, 77, 206, 0.14);
+  outline-offset: 1px;
+}
+
+.service-manager-textarea {
+  resize: vertical;
+}
+
+.service-manager-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.service-manager-tag-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: #1f2a44;
+  background: #f4f7ff;
+  border: 1px solid #d4def2;
+  border-radius: 999px;
+  padding: 0.3rem 0.65rem;
+}
+
+.service-manager-tag-option input {
+  margin: 0;
+}
+
+.service-manager-form-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-end;
+}
+
+.service-manager-editing-note {
+  background: #eef3ff;
+  border: 1px solid #c4d2f0;
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #1f2a44;
+}
+
+.service-card-admin-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #e3e9f4;
+}
+
+.service-card-admin-actions button {
+  flex: 1;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.85rem;
+  border: 1px solid #cdd7e9;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-card-edit {
+  background: #eef3ff;
+  color: #4f4dce;
+}
+
+.service-card-edit:hover {
+  background: #e3e9f4;
+}
+
+.service-card-delete {
+  background: #fff1f1;
+  color: #a23333;
+}
+
+.service-card-delete:hover {
+  background: #fdd;
+}
+
+.service-manager-file-input {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px dashed #cdd7e9;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #1f2a44;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-manager-file-input:hover {
+  border-color: #4f4dce;
+  background: #f9fbff;
+}
+
+.service-manager-image-preview {
+  margin-top: 1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 200px;
+  border: 1px solid #cdd7e9;
+}
+
+.service-manager-image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.service-manager-gallery-preview {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.service-manager-gallery-preview img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border: 1px solid #cdd7e9;
+  border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+  .service-manager-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .service-manager-btn {
+    width: 100%;
+  }
+
+  .service-manager-form-actions {
+    flex-direction: column;
+  }
+
+  .service-card-admin-actions {
+    flex-direction: column;
+  }
+
+  .service-card-admin-actions button {
+    width: 100%;
+  }
+
+  .service-manager-gallery-preview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

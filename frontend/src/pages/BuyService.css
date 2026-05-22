@@ -1,0 +1,140 @@
+.buy-page {
+  flex: 1;
+  min-height: calc(100vh - 180px);
+  padding: 3rem;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(49, 175, 214, 0.14), transparent 45%),
+    radial-gradient(circle at 85% 5%, rgba(79, 77, 206, 0.14), transparent 40%),
+    #f7f9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-card {
+  width: 100%;
+  max-width: 1100px;
+  background: white;
+  border: 1px solid #e3e9f4;
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+}
+
+.buy-media {
+  background: #eef3ff;
+}
+
+.buy-image,
+.buy-image-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.buy-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #58709d;
+  font-weight: 700;
+  padding: 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #eef3ff 0%, #f8fbff 100%);
+}
+
+.buy-content {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #4f4dce;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.buy-content h1 {
+  font-size: 2rem;
+  color: #1f2a44;
+  margin-bottom: 0.75rem;
+}
+
+.buy-price {
+  color: #4f4dce;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: auto;
+}
+
+.buy-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.buy-button {
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.buy-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.buy-button-primary {
+  /* square single-color primary action */
+  background: #4d6fce;
+  color: white;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-button-secondary {
+  background: #eef2f9;
+  color: #1f2a44;
+  border: 1px solid #cdd7e9;
+}
+
+.buy-loading,
+.buy-error {
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  border: 1px solid #e3e9f4;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #1f2a44;
+}
+
+@media (max-width: 800px) {
+  .buy-page {
+    padding: 1.25rem;
+  }
+
+  .buy-card {
+    grid-template-columns: 1fr;
+  }
+
+  .buy-image,
+  .buy-image-placeholder {
+    min-height: 260px;
+  }
+
+  .buy-actions {
+    flex-direction: column;
+  }
+}

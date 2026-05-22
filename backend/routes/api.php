@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\WorkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,10 +38,28 @@ Route::middleware('auth:sanctum')->group(function () {
     
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/me', [AuthController::class, 'me']);
+    Route::put('/profile/username', [AuthController::class, 'updateUsername']);
+    Route::put('/profile/password', [AuthController::class, 'updatePassword']);
 });
 
 // Add your API routes below this line
 // Example:
 // Route::get('/posts', [PostController::class, 'index']);
 // Route::post('/posts', [PostController::class, 'store']);
+
+// Public resource routes for services and works
+Route::get('/services', [ServiceController::class, 'index']);
+Route::get('/services/{service}', [ServiceController::class, 'show']);
+Route::get('/works', [WorkController::class, 'index']);
+Route::get('/works/{work}', [WorkController::class, 'show']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/services', [ServiceController::class, 'store']);
+    Route::match(['post', 'put', 'patch'], '/services/{service}', [ServiceController::class, 'update']);
+    Route::delete('/services/{service}', [ServiceController::class, 'destroy']);
+
+    Route::post('/works', [WorkController::class, 'store']);
+    Route::match(['post', 'put', 'patch'], '/works/{work}', [WorkController::class, 'update']);
+    Route::delete('/works/{work}', [WorkController::class, 'destroy']);
+});
 

@@ -135,4 +135,98 @@ class AuthController extends Controller
             'user' => $request->user(),
         ], 200);
     }
+
+    /**
+     * Update the authenticated user's username
+     */
+    public function updateUsername(Request $request)
+    {
+        try {
+            $validated = $request->validate([
+                'name' => 'required|string|min:4|max:255',
+                'current_password' => 'required|string',
+            ], [
+                'name.required' => 'Lietotājvārds ir obligāts.',
+                'name.min' => 'Lietotājvārdā jābūt vismaz 4 rakstzīmēm.',
+                'name.max' => 'Lietotājvārds ir pārāk garš.',
+                'current_password.required' => 'Jāievada pašreizējā parole.',
+            ]);
+
+            $user = $request->user();
+
+            if (!Hash::check($validated['current_password'], $user->password)) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Pašreizējā parole nav pareiza.',
+                ], 422);
+            }
+
+            $user->name = $validated['name'];
+            $user->save();
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Lietotājvārds veiksmīgi atjaunināts!',
+                'user' => $user->fresh(),
+            ], 200);
+        } catch (ValidationException $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Validācijas kļūda',
+                'errors' => $e->errors(),
+            ], 422);
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Kļūda lietotājvārda atjaunināšanā: ' . $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    /**
+     * Update the authenticated user's password
+     */
+    public function updatePassword(Request $request)
+    {
+        try {
+            $validated = $request->validate([
+                'current_password' => 'required|string',
+                'password' => 'required|string|min:6|confirmed',
+            ], [
+                'current_password.required' => 'Jāievada pašreizējā parole.',
+                'password.required' => 'Jaunā parole ir obligāta.',
+                'password.min' => 'Parolei jābūt vismaz 6 rakstzīmes garai.',
+                'password.confirmed' => 'Jaunā parole un apstiprinājums nesakrīt.',
+            ]);
+
+            $user = $request->user();
+
+            if (!Hash::check($validated['current_password'], $user->password)) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Pašreizējā parole nav pareiza.',
+                ], 422);
+            }
+
+            $user->password = $validated['password'];
+            $user->save();
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Parole veiksmīgi atjaunināta!',
+                'user' => $user->fresh(),
+            ], 200);
+        } catch (ValidationException $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Validācijas kļūda',
+                'errors' => $e->errors(),
+            ], 422);
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Kļūda paroles atjaunināšanā: ' . $e->getMessage(),
+            ], 500);
+        }
+    }
 }

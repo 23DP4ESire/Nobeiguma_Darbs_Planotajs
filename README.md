@@ -1,151 +1,91 @@
-# Planotajs - Mājas Projektu Planotājs
+# Planotajs - Majas Projektu Planotajs
 
 ## Apraksts
 
-**Planotajs** ir vienkāršs un pieejams mājas projektu plānošanas risinājums privātpersonām un uzņēmumiem. Mēs piedāvājam profesionālus mājas projektus ar pieņemamām cenām. Planotajs palīdz klientiem redzēt savu sapņu māju projektus pirms to uzbūvēšanas.
+Planotajs ir majas projektu planosanas lietotne ar divam dalam:
 
----
+- Laravel backend (`backend/`)
+- React + Vite frontend (`frontend/`)
 
-## Sistēmas prasības
+## Sistemas prasibas
 
-- **PHP** 8.3+
-- **Node.js** 18+
-- **Composer** (PHP pakotņu menedžeris)
-- **npm** (Node.js pakotņu menedžeris)
+- PHP 8.2+
+- Composer
+- Node.js 18+
+- npm
 
----
+## Instalacija (vienu reizi)
 
-## Instalācija
-
-### 1. Klonēt repozitoriju
+### 1. Klonet repozitoriju
 
 ```bash
 git clone https://github.com/23DP4ESire/Nobeiguma_Darbs_Planotajs.git
 cd Nobeiguma_Darbs_Planotajs
 ```
 
-### 2. Backend instalācija
+### 2. Iestatīt backend
 
 ```bash
 cd backend
 composer install
-```
-
-Kopējiet `.env.example` uz `.env` (ja nepieciešams):
-```bash
 cp .env.example .env
-```
-
-Ģenerējiet aplikācijas atslēgu:
-```bash
 php artisan key:generate
-```
-
-Izveidojiet datu bāzi un palaidiet migrācijas:
-```bash
+touch database/database.sqlite
 php artisan migrate
 ```
 
-### 3. Frontend instalācija
+### 3. Iestatīt frontend
 
 ```bash
 cd ../frontend
 npm install
 ```
 
----
+## Projekta palaisana
 
-## Serveru palaišana
+Atver 2 terminalus projekta saknes mape.
 
-### Backend servera palaišana
-
-```bash
-cd run
-php ./run-backend.sh
-```
-
-**Backend būs pieejams:** `http://localhost:8000`
-
-### Frontend servera palaišana
-
-Atvērt jaunu termināla logu/tab:
+### Terminalis 1 - Backend
 
 ```bash
-cd run
-npm ./run-backend.sh
+cd backend
+php artisan serve --host=127.0.0.1 --port=8000
 ```
 
-**Frontend būs pieejams:** `http://localhost:5173`
+Backend adrese: `http://127.0.0.1:8000`
 
-### Abi serveri vienlaicīgi (opcija)
+### Terminalis 2 - Frontend
 
-Ja vēlaties palaist abu serveru daļas vienlaicīgi:
-
-**Terminal 1:**
 ```bash
-cd run
-./run-both.sh
-```
-**Lai beigtu serverus**
-```bash
-pkill -f 'php -S' && pkill -f 'vite'
+cd frontend
+npm run dev -- --host 127.0.0.1 --port 5173
 ```
 
----
+Frontend adrese: `http://127.0.0.1:5173`
 
-## Projekta struktūra
+## Serveru apturesana
 
-```
+Nospied `Ctrl + C` katra terminali, kura serveris darbojas.
+
+## API
+
+- API baze: `http://127.0.0.1:8000/api`
+- Testa endpoints: `GET /api/test`
+- Frontend pieprasijumi uz `/api` tiek novirziti caur Vite proxy uz backend
+
+## Projekta struktura
+
+```text
 Nobeiguma_Darbs_Planotajs/
-├── backend/              # Laravel API
-│   ├── app/             # Aplikācijas loģika
-│   ├── config/          # Konfigurācija
-│   ├── database/        # Migrācijas un seederi
-│   ├── routes/          # API maršruti
-│   └── ...
-├── frontend/            # React + Vite
-│   ├── src/
-│   │   ├── pages/       # React lapas (Home, About)
-│   │   ├── App.jsx      # Galvenais komponentes
-│   │   └── ...
-│   ├── public/          # Statiskos faili (attēli, etc.)
-│   └── ...
-└── README.md            # Šis fails
+|- backend/   # Laravel API
+|- frontend/  # React + Vite
+`- README.md
 ```
 
----
+## Licence
 
-
-## API Endpoints
-
-Backend API pieejams uz `http://localhost:8000/api`
-
-**Pamatendpunkti:**
-- `GET /api/test` - Testa endpoint
-- Papildu endpoints var pievienot jaunu parametru modelim
-
----
-
-## Pieejamās lapas
-
-### Frontend marvirā
-
-- **Sākums** (`/`) - Mājas projektu apraksts un galerija
-- **Par mums** (`/about`) - Informācija par Planotāju, misija, vērtības
-- **Pakalpojumi** - Nākotnē
-- **Kontakti** - Nākotnē
-
----
-
-
-## Licencija
-
-Šis projekts ir privāts un paredzēts mācībām.
-
----
+Sis projekts ir privats un paredzets macibam.
 
 ## Autors
 
-**23DP4ESire** - Nobeiguma darbs
-
-
+23DP4ESire (Emils Sire, DP3-4)

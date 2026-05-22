@@ -10,7 +10,7 @@ function LoginModal({ isOpen, onClose }) {
   const [loading, setLoading] = useState(false)
   const [successMessage, setSuccessMessage] = useState('')
 
-  const API_BASE_URL = 'http://localhost:8000/api'
+  const API_BASE_URL = '/api'
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -64,7 +64,9 @@ function LoginModal({ isOpen, onClose }) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({
           name: username,
           email,
@@ -86,6 +88,7 @@ function LoginModal({ isOpen, onClose }) {
         setError(data.message || 'Kļūda kontu izveidojot. Mēģiniet vēlreiz.')
       }
     } catch (err) {
+      console.error('Register error:', err)
       setError('Kļūda savienojumā ar serveri. Mēģiniet vēlreiz.')
     } finally {
       setLoading(false)
@@ -114,7 +117,7 @@ function LoginModal({ isOpen, onClose }) {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Ievadiet lietotājvārdu"
-                autocomplete="username"
+                autoComplete="username"
                 required
               />
             </div>
@@ -129,7 +132,7 @@ function LoginModal({ isOpen, onClose }) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Ievadiet e-pastu"
-              autocomplete="email"
+              autoComplete="email"
               required
             />
           </div>
@@ -143,7 +146,7 @@ function LoginModal({ isOpen, onClose }) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Ievadiet paroli"
-              autocomplete={isLoginMode ? "current-password" : "new-password"}
+              autoComplete={isLoginMode ? "current-password" : "new-password"}
               required
             />
           </div>

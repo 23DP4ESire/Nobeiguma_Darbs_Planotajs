@@ -17,9 +17,37 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        User::updateOrCreate(
+            ['email' => 'admin@test.lv'],
+            [
+                'name' => 'admin',
+                'password' => 'admin11',
+                'is_admin' => true,
+            ]
+        );
+
+        User::updateOrCreate(
+            ['email' => 'test@example.com'],
+            [
+                'name' => 'Test User',
+                'password' => 'password',
+                'is_admin' => false,
+            ]
+        );
+
+        User::updateOrCreate(
+            ['email' => 'testresult@test.lv'],
+            [
+                'name' => 'testresult',
+                'password' => 'testresult',
+                'is_admin' => false,
+            ]
+        );
+
+        // Seed services
+        $this->call(ServiceSeeder::class);
+
+        // Seed works
+        $this->call(WorkSeeder::class);
     }
 }

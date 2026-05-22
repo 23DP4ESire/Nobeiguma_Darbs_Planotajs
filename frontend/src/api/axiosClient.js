@@ -7,15 +7,26 @@ console.log('API Base URL:', API_BASE_URL)
 
 const axiosClient = axios.create({
   baseURL: API_BASE_URL,
+  withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
   },
 })
 
-// Add request interceptor for debugging
+// Add request interceptor for debugging and token auth
 axiosClient.interceptors.request.use(
   (config) => {
+    const token = localStorage.getItem('token')
+
+    if (config.data instanceof FormData) {
+      delete config.headers['Content-Type']
+    }
+
+    if (token && !config.headers.Authorization) {
+      config.headers.Authorization = `Bearer ${token}`
+    }
+
     console.log('API Request:', config.method.toUpperCase(), config.url)
     return config
   },
