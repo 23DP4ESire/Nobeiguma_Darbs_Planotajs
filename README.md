@@ -14,6 +14,14 @@ Planotajs ir majas projektu planosanas lietotne ar divam dalam:
 - Node.js 18+
 - npm
 
+## Versijas (pašreiz izmantotās)
+
+- PHP: ^8.2
+- Laravel: ^12.0 (Laravel 12.x)
+- Vite: frontend ^7.3.x, backend ^7.0.x
+- React: ^19.x
+- Node.js: 18+
+
 ## Instalacija (vienu reizi)
 
 ### 1. Klonet repozitoriju
@@ -49,7 +57,7 @@ Atver 2 terminalus projekta saknes mape.
 
 ```bash
 cd backend
-php artisan serve --host=127.0.0.1 --port=8000
+php artisan serve
 ```
 
 Backend adrese: `http://127.0.0.1:8000`
@@ -58,7 +66,7 @@ Backend adrese: `http://127.0.0.1:8000`
 
 ```bash
 cd frontend
-npm run dev -- --host 127.0.0.1 --port 5173
+npm run dev
 ```
 
 Frontend adrese: `http://127.0.0.1:5173`
